@@ -3,8 +3,9 @@ $("#github").on("keyup", function() {
 
   emptyCurrentList();
 
+  // Using the github API https://developer.github.com/v3/repos/#list-user-repositories
   $.ajax({
-    url: "https://api.github.com/users/" + user + "/repos",
+    url: "https://api.github.com/user/" + user + "/repos",
     success: function(repos) {
       iterateThroughData(repos);
     },
