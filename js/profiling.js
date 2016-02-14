@@ -1,1 +1,3 @@
-// Nothing here
+$(document).on('scroll', function() {
+  $(window).trigger('resize');
+});
