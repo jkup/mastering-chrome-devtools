@@ -20,3 +20,7 @@ p {
   height: 100px;
   background: blue;
 }
+
+a:hover {
+  color: #FF33CC;
+}
