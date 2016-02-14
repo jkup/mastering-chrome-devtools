@@ -24,3 +24,7 @@ p {
 a:hover {
   color: #FF33CC;
 }
+
+#nodes {
+  display: none;
+}
