@@ -2,8 +2,11 @@
   "name": "mastering-chrome-devtools",
   "version": "1.0.0",
   "description": "An example web site for Chrome DevTools workshops",
-  "main": "index.js",
-  "dependencies": {},
+  "main": "server.js",
+  "dependencies": {
+    "compression": "^1.6.1",
+    "express": "^4.13.4"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
