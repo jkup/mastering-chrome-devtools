@@ -1,2 +1,3 @@
 # mastering-chrome-devtools
-Code for ForwardJS workshop
+
+Website for teaching people about Chrome DevTools
