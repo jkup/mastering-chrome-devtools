@@ -7,6 +7,26 @@ h1, h2, h3, h4, h5 {
   font-family: 'Ovo', serif;
 }
 
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
 .main-content {
   margin-top: 50px;
 }
@@ -27,4 +47,8 @@ a:hover {
 
 #nodes {
   display: none;
+}
+
+.list {
+
 }
