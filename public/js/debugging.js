@@ -1,5 +1,5 @@
 $("#github").on("keyup", function() {
-  var user = $("#github").val();
+  var user = $("#github");
 
   emptyCurrentList();
 
