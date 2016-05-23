@@ -22,7 +22,7 @@ function iterateThroughData(repos) {
 }
 
 function insertHTML(repo) {
-  $("#repositories").append("<li>" + repo.name + "</li>");
+  $("#repositories").append("<li>" + repo.title + "</li>");
 }
 
 function emptyCurrentList() {
