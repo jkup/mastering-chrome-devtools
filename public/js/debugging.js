@@ -5,7 +5,7 @@ $("#github").on("keyup", function() {
 
   // Using the github API https://developer.github.com/v3/repos/#list-user-repositories
   $.ajax({
-    url: "https://api.github.com/user/" + user + "/repos",
+    url: "https://api.github.com/users/" + user + "/repos",
     success: function(repos) {
       iterateThroughData(repos);
     },
@@ -22,7 +22,7 @@ function iterateThroughData(repos) {
 }
 
 function insertHTML(repo) {
-  $("#repositories").append("<li>" + repo.title + "</li>");
+  $("#repositories").append("<li>" + repo.name + "</li>");
 }
 
 function emptyCurrentList() {
