@@ -25,6 +25,8 @@ html
             li
               a(href='/profiling') Profiling
             li
+              a(href='/timing') Timing
+            li
               a(href='/page-jank') Page Jank
             li
               a(href='/memory-leaks') Memory Leaks
@@ -33,6 +35,5 @@ html
     script(src='/js/jquery.js')
     script(src='/js/bootstrap.js')
     script(src='/js/lodash.js')
-    script(src='/js/editing.js')
-    script(src='/js/profiling.js')
-    script(src='/js/debugging.js')
+    each script in scripts
+      script(src='/js/' + script)
