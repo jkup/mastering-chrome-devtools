@@ -35,5 +35,6 @@ html
     script(src='/js/jquery.js')
     script(src='/js/bootstrap.js')
     script(src='/js/lodash.js')
-    each script in scripts
-      script(src='/js/' + script)
+    if scripts
+      each script in scripts
+        script(src='/js/' + script)
