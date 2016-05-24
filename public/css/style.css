@@ -17,6 +17,7 @@ body .navbar-default {
   background: #00c6ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 1px solid #0071FD;
 }
 
 body .navbar-default .navbar-brand,
@@ -26,8 +27,13 @@ body .navbar-default .navbar-nav>li>a {
 
 body .navbar-default .navbar-brand:hover,
 body .navbar-default .navbar-nav>li>a:hover {
-  color: #FFF;
-  text-decoration: underline;
+  color: #EEE;
+  /* text-decoration: underline; */
+}
+
+body .navbar-default .navbar-collapse, .navbar-default .navbar-form,
+body .navbar-default .navbar-toggle {
+  border-color: #0071FD;
 }
 
 .main-content {
