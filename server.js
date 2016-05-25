@@ -47,7 +47,9 @@ app.get('/page-jank', function (req, res) {
 
 // Memory Leaks
 app.get('/memory-leaks', function (req, res) {
-  res.render('memory-leaks/index')
+  res.render('memory-leaks/index', {
+    scripts: ['memory-leaks.js']
+  })
 })
 
 app.get('/memory-leaks/accidental-globals', function (req, res) {

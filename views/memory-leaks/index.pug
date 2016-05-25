@@ -1,8 +1,21 @@
 extends ../layout.pug
 
 block content
-  div.col-md-8.col-md-offset-2
-    h1 Common JavaScript Memory Leaks
+  div.col-md-4.col-md-offset-2
+    h3 There are some memory leaks on this page. Can you find them?
+    ol
+      li Start with a Timeline recording. Can you identify that there *is* a leak?
+      li Next collect a heap snapshot.
+      li Now click the "Do some work" button
+      li Collect another snapshop
+      li Compare them, can you see what's going on?
+
+    button.btn.btn-lg.btn-primary Do some work
+
+    div#nodes
+
+  div.col-md-4
+    h3 Common causes of memory leaks
     div.list-group
       a(href="/memory-leaks/accidental-globals").list-group-item Accidental Globals
       a(href="/memory-leaks/callbacks-and-timers").list-group-item Callbacks and Timers
