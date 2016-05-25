@@ -3,10 +3,16 @@ extends ./layout.pug
 block content
   div#index.col-md-8.col-md-offset-2
     h1 Mastering Chrome DevTools
-    p
+
+    p 
       | This site is designed as teaching aid for my "Mastering Chrome DevTools" workshops but I hope it will stand fine on its own.
-    p The workshop is divided into three sections:
+
+    p The workshop is divided into multiple sections:
+
     ul
-      li Editing - Changing styles and markup and persisting changes to disk
-      li Debugging - Using the step-through debugger
-      li Profiling - JavaScript performance, page jank and finding / fixing memory leaks
+      li Editing - Changing styles and markup and persisting those changes to disk
+      li Debugging - Using the step-through debugger to fix a buggy program
+      li Profiling - Audit a slow page. Run a JavaScript CPU profile and figure out what's causing slowness.
+      li Timing - See how long each function on your sites takes and figure out which one is the longest!
+      li Page Jank - Try to identify page jank without tooling. Then use the DevTools to fix it!
+      li Memory Leaks - Learn about the common causes of JS memory leaks. Then find the one on the page and fix it!
