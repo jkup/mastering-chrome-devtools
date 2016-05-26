@@ -117,6 +117,10 @@ a:hover {
   pointer-events: none;
 }
 
+body .thumbnail {
+  background-color: #EEE;
+}
+
 .thumbnail .glyphicon {
   font-size: 30px;
   margin-top: 25px;
