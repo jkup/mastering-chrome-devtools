@@ -4,27 +4,55 @@ block content
   div#index.col-md-8.col-md-offset-2
     h1 Mastering Chrome DevTools
 
-    p
-      | This site is designed as teaching aid for my "Mastering Chrome DevTools" workshops but I hope it will stand fine on its own.
+    p This site is designed as teaching aid for my "Mastering Chrome DevTools" workshops but I hope it will stand fine on its own.
 
     p The workshop is divided into multiple sections:
 
-    ul
-      li
-        a(href="/editing") Editing
-        | - Changing styles and markup and persisting those changes to disk
-      li
-        a(href="/debugging") Debugging
-        | - Using the step-through debugger to fix a buggy program
-      li
-        a(href="/profiling") Profiling
-        | - Audit a slow page. Run a JavaScript CPU profile and figure out what's causing slowness.
-      li
-        a(href="/timing") Timing
-        | - See how long each function on your sites takes and figure out which one is the longest!
-      li
-        a(href="/page-jank") Page Jank
-        | - Try to identify page jank without tooling. Then use the DevTools to fix it!
-      li
-        a(href="/memory-leaks") Memory Leaks
-        | - Learn about the common causes of JS memory leaks. Then find the one on the page and fix it!
+    div.col-md-4
+      div.thumbnail.text-center.text-center
+        a(href="/editing")
+          span.glyphicon.glyphicon-pencil(aria-hidden="true")
+        div.caption
+          h3
+            a(href="/editing") Editing
+          p Changing styles and markup and persisting those changes to disk
+    div.col-md-4
+      div.thumbnail.text-center
+        a(href="/debugging")
+          span.glyphicon.glyphicon-search(aria-hidden="true")
+        div.caption
+          h3
+            a(href="/debugging") Debugging
+          p Using the step-through debugger to fix a buggy program
+    div.col-md-4
+      div.thumbnail.text-center
+        a(href="/profiling")
+          span.glyphicon.glyphicon-stats(aria-hidden="true")
+        div.caption
+          h3
+            a(href="/profiling") Profiling
+          p Audit a slow page. Run a JavaScript CPU profile and figure out what's causing slowness.
+    div.col-md-4
+      div.thumbnail.text-center
+        a(href="/timing")
+          span.glyphicon.glyphicon-dashboard(aria-hidden="true")
+        div.caption
+          h3
+            a(href="/timing") Timing
+          p See how long each function on your sites takes and figure out which one is the longest!
+    div.col-md-4
+      div.thumbnail.text-center
+        a(href="/page-jank")
+          span.glyphicon.glyphicon-list-alt(aria-hidden="true")
+        div.caption
+          h3
+            a(href="/page-jank") Page Jank
+          p Try to identify page jank without tooling. Then use the DevTools to fix it!
+    div.col-md-4
+      div.thumbnail.text-center
+        a(href="/memory-leaks")
+          span.glyphicon.glyphicon-hdd(aria-hidden="true")
+        div.caption
+          h3
+            a(href="/memory-leaks") Memory Leaks
+          p Learn about the common causes of JS memory leaks. Then find the one on the page and fix it!
