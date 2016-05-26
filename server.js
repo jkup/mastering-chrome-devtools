@@ -22,7 +22,7 @@ app.get('/editing', function (req, res) {
 // Debugging Demo
 app.get('/debugging', function (req, res) {
   res.render('debugging', {
-    scripts: ['debugging.js']
+    scripts: ['debugging.js', 'debugging2.js']
   })
 })
 

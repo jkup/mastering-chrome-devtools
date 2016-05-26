@@ -66,10 +66,47 @@ a:hover {
   /*color: #841717;*/
 }
 
+/* ***** AD CODE STYLING ***** */
+
 .carbon-ad-container {
   position: fixed;
   top: 60px;
 }
+
+.carbon-wrap{
+	display: block;
+	background: #f1f1f1;
+	padding: 15px 15px 10px 15px;
+}
+.carbon-wrap a {
+    display: block;
+}
+
+.carbon-img {
+    float: left;
+    margin-right: 10px;
+}
+
+.carbon-text {
+    font-size: 80%;
+    line-height: 130%;
+    min-width: 120px;
+    color: #06c;
+}
+
+.carbon-poweredby {
+    color: #6e6e6e;
+    text-decoration: underline;
+    font-size: 65%;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin: 8px 0 0 0;
+}
+
+.cf:before,.cf:after, .carbon-wrap:before, .carbon-wrap:after{content:"";display:table;}
+.cf:after, .carbon-wrap:after{clear:both;}
+.cf, .carbon-wrap{zoom:1;}
 
 .menu-animation-wrapper {
   overflow: hidden;
