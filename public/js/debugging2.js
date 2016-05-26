@@ -6,9 +6,10 @@ function foo() {
   }
 
   bar(one);
+  foobar();
 }
 
-function bar() {
+function foobar() {
   var obj = {
     thing1: 'thing1',
     thing2: 'thing2'
