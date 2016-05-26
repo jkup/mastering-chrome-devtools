@@ -9,7 +9,9 @@ app.use(express.static('public', { maxAge: 86400000 }))
 
 // Home Page
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('index', {
+    scripts: ['main.js']
+  })
 })
 
 // Editing Demo

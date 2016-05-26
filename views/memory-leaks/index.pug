@@ -2,7 +2,7 @@ extends ../layout.pug
 
 block content
   div.col-md-8.col-md-offset-2
-    h3 Common causes of memory leaks
+    h1 Common causes of memory leaks
     ul#myTabs.nav.nav-tabs
       li(role="presentation").active
         a(href="#globals", aria-controls="globals", role="tab", data-toggle="tab").list-group-item Accidental Globals
@@ -15,29 +15,41 @@ block content
 
     div.tab-content
       div#globals.tab-pane.active(role='tabpanel')
-        h2 If you accidently create a global variable
-        p with something like this:
-        code function foo() {
-          |  bar = "Hello World!";
-          | }
+        h3 If you accidently create a global variable
+        p Outside of strict mode, code like this:
+        pre
+          code
+            | function foo() {
+            |   bar = "Hello World!";
+            | }
+        p Actually generates
+        pre
+          code
+            | function foo() {
+            |   window.bar = "Hello World!";
+            | }
+        p And since window will never be garbage collected, anything bound to it stays until manually deleted.
       div#timers.tab-pane(role='tabpanel') Timers
-        h2 Don't forget to cancel your Intervals and Callbacks
-        p for example:
-        code var bigData = getData();
-          | setInterval(function() {
-          | node.innerHTML = JSON.stringify(bigData));
-          | }, 1000);
+        h3 Don't forget to cancel your Intervals and Callbacks
+        p For example:
+        pre
+          code var bigData = getData();
+            | setInterval(function() {
+            | node.innerHTML = JSON.stringify(bigData));
+            | }, 1000);
+        p Since that Interval will continue to run. All the memory consumed for "bigData" will leak.
 
       div#forgotten.tab-pane(role='tabpanel') Forgotten
-        h2 Lots of times we keep references to DOM elements in memory
+        h3 Lots of times we keep references to DOM elements in memory
         p If you remove the element from the DOM, remember to remove it from memory too!
-        code var button = document.getElementById('button');
-          | function removeButton() {
-          | document.body.removeChild(document.getElementById('button'));
-          | }
+        pre
+          code var button = document.getElementById('button');
+            | function removeButton() {
+            | document.body.removeChild(document.getElementById('button'));
+            | }
       div#closures.tab-pane(role='tabpanel') Closures
 
-    h3 There are some memory leaks on this page. Can you find them?
+    h2 There are some memory leaks on this page. Can you find them?
     ol
       li Start with a Timeline recording. Can you identify that there *is* a leak?
       li Next collect a heap snapshot.
