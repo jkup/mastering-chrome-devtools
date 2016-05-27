@@ -1,1 +1,1 @@
-console.log('hello')
+console.log('Service Worker is operational!')
