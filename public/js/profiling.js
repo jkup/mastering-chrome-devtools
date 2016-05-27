@@ -14,7 +14,6 @@ function createSomeNodes() {
 function grow() {
     x.push(new Array(1000000).join('x'));
     createSomeNodes();
-    setTimeout(grow,1000);
 }
 
 grow();
