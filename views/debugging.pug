@@ -6,6 +6,8 @@ block content
     h1
       small Can you figure out what?
     h3 Enter a Github Username
-    input#github.form-control(type='text', placeholder='Enter Github Username')
+    form#github.form-inline
+      input#user.form-control(type='text', placeholder='Enter Github Username')
+      input.btn.btn-default(type='submit')
     h3 And see a list of that user's repositories
     ul#repositories
