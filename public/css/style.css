@@ -36,6 +36,10 @@ body .navbar-default .navbar-toggle {
   border-color: #0071FD;
 }
 
+blockquote {
+  margin-top: 250px;
+}
+
 .main-content {
   margin-top: 50px;
 }
