@@ -1,10 +1,10 @@
 var express = require('express')
-//var compression = require('compression')
+// var compression = require('compression')
 var app = express()
 
 app.set('view engine', 'pug')
 
-//app.use(compression())
+// app.use(compression())
 app.use(express.static('public', { maxAge: 86400000 }))
 
 // Home Page
