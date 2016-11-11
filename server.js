@@ -5,7 +5,7 @@ var app = express()
 app.set('view engine', 'pug')
 
 // app.use(compression())
-app.use(express.static('public', { maxAge: 86400000 }))
+app.use(express.static('public'))
 
 // Home Page
 app.get('/', function (req, res) {
