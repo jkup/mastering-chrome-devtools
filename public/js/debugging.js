@@ -1,4 +1,5 @@
-$("#github").on("submit", function() {
+$("#github").on("submit", function(e) {
+  e.preventDefault();
   var user = $("#user");
 
   emptyCurrentList();
