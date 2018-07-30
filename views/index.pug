@@ -1,59 +1,16 @@
 extends ./layout.pug
 
 block content
-  div#index.col-md-8.offset-md-2
     h1 Mastering Chrome DevTools
 
     p This site is designed as teaching aid for my "Mastering Chrome DevTools" workshops but I hope it will stand fine on its own.
 
-    h3 The workshop is divided into multiple sections:
+    h2 The workshop is divided into multiple sections:
 
-    div.row
-      div.col-sm-4
-        .card(style='width: 18rem;')
-          img.card-img-top(src='.../100px180/', alt='Card image cap')
-          .card-body
-            h5.card-title Editing
-            p.card-text
-              | Changing styles and markup and persisting those changes to disk.
-            a.btn.btn-primary(href='/editing') Learn Now
-      div.col-sm-4
-        .card(style='width: 18rem;')
-          img.card-img-top(src='.../100px180/', alt='Card image cap')
-          .card-body
-            h5.card-title Debugging
-            p.card-text
-              | Using the step-through debugger to fix a buggy program.
-            a.btn.btn-primary(href='/debugging') Learn Now
-      div.col-sm-4
-        .card(style='width: 18rem;')
-          img.card-img-top(src='.../100px180/', alt='Card image cap')
-          .card-body
-            h5.card-title Profiling
-            p.card-text
-              | Audit a slow page. Run a JavaScript CPU profile and figure out what's causing slowness.
-            a.btn.btn-primary(href='/profiling') Learn Now
-      div.col-sm-4
-        .card(style='width: 18rem;')
-          img.card-img-top(src='.../100px180/', alt='Card image cap')
-          .card-body
-            h5.card-title Timing
-            p.card-text
-              | See how long each function on your sites takes and figure out which one is the longest!
-            a.btn.btn-primary(href='/timing') Learn Now
-      div.col-sm-4
-        .card(style='width: 18rem;')
-          img.card-img-top(src='.../100px180/', alt='Card image cap')
-          .card-body
-            h5.card-title Page Jank
-            p.card-text
-              | Try to identify page jank without tooling. Then use the DevTools to fix it!
-            a.btn.btn-primary(href='/page-jank') Learn Now
-      div.col-sm-4
-        .card(style='width: 18rem;')
-          img.card-img-top(src='.../100px180/', alt='Card image cap')
-          .card-body
-            h5.card-title Memory Leaks
-            p.card-text
-              | Learn about the common causes of JS memory leaks. Then find the one on the page and fix it!
-            a.btn.btn-primary(href='/memory-leaks') Learn Now
+    ol
+      li Editing - Changing styles and markup and persisting those changes to disk.
+      li Debugging - Using the step-through debugger to fix a buggy program.
+      li Profiling - Audit a slow page. Run a JavaScript CPU profile and figure out what's causing slowness.
+      li Timing - See how long each function on your sites takes and figure out which one is the longest!
+      li Page Jank - Try to identify page jank without tooling. Then use the DevTools to fix it!
+      li Memory Leaks - Learn about the common causes of JS memory leaks. Then find the one on the page and fix it!

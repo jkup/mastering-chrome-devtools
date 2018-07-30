@@ -1,0 +1,42 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.nav {
+  background: #333333;
+}
+
+.nav-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav a {
+  color: #ffffff;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.nav .logo {
+  font-weight: bold;
+  font-size: 22px;
+}

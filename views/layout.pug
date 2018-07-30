@@ -1,40 +1,30 @@
 doctype html
-html
+html(lang='en')
   head
     title Mastering Chrome Devtools
-    link(rel='stylesheet', type='text/css', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/css/normalize.css')
     link(rel='stylesheet', type='text/css', href='/css/style.css')
     link(rel="icon", sizes="32x32", type="image/png", href="/img/favicon.png")
   body
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      a.navbar-brand(href='/')
-        | Mastering DevTools
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-        span.navbar-toggler-icon
-      #navbarSupportedContent.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto
-          li.nav-item
-            a.nav-link(href='/editing')
-              | Editing 
-          li.nav-item
-            a.nav-link(href='/debugging')
-              | Debugging 
-          li.nav-item
-            a.nav-link(href='/profiling')
-              | Profiling
-          li.nav-item
-            a.nav-link(href='/timing')
-              | Timing 
-          li.nav-item
-            a.nav-link(href='/page-jank')
-              | Page Jank 
-          li.nav-item
-            a.nav-link(href='/memory-leaks')
-              | Memory Leaks 
-    .row.main-content
+    nav.nav
+      .nav-inner
+        a.logo(href='/') Mastering DevTools
+        ul
+          li
+            a(href='/editing') Editing
+          li
+            a(href='/debugging') Debugging
+          li
+            a(href='/profiling') Profiling
+          li
+            a(href='/timing') Timing
+          li
+            a(href='/page-jank') Page Jank
+          li
+            a(href='/memory-leaks') Memory Leaks
+    div.wrapper
       block content
     script(src='/js/jquery.js')
-    script(src='/js/bootstrap.bundle.min.js')
     script(src='/js/lodash.js')
     if scripts
       each script in scripts
