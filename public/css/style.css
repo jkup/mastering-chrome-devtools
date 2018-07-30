@@ -5,6 +5,10 @@ body {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+}
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +43,28 @@ body {
 .nav .logo {
   font-weight: bold;
   font-size: 22px;
+}
+
+/* Debugging */
+
+#fetcher {
+  background-color: #007bff;
+  border-color: #0062cc;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+#fetcher:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.debug-card {
+  list-style: none;
+}
+
+.debug-title {
+  display: inline-block;
 }

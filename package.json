@@ -2,7 +2,7 @@
   "name": "mastering-chrome-devtools",
   "version": "1.0.0",
   "description": "An example web site for Chrome DevTools workshops",
-  "main": "server.js",
+  "main": "server/index.js",
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.14.0",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
