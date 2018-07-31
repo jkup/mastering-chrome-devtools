@@ -56,9 +56,9 @@ app.get("/node", function(req, res) {
 });
 
 // Timing Demo
-app.get("/timing", function(req, res) {
-  res.render("timing", {
-    scripts: ["timing.js"]
+app.get("/mark-and-measure", function(req, res) {
+  res.render("mark-and-measure", {
+    scripts: ["mark-and-measure.js"]
   });
 });
 
