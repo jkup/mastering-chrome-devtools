@@ -1,12 +1,13 @@
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30.5px;
 }
 
 a {
-  color: #5498ef;
+  color: #4e87ed;
   text-decoration: none;
 }
 
@@ -24,7 +25,7 @@ img {
 }
 
 .nav {
-  background: #333333;
+  background: #4e87ed;
 }
 
 .nav-inner {
@@ -47,6 +48,10 @@ img {
   color: #ffffff;
   margin-right: 15px;
   text-decoration: none;
+}
+
+.nav a:hover {
+  color: #eeeeee;
 }
 
 .nav .logo {

@@ -64,6 +64,11 @@ app.get("/mark-and-measure", function(req, res) {
   });
 });
 
+// Srcset Demo
+app.get("/srcset", function(req, res) {
+  res.render("srcset");
+});
+
 // Page Jank Demo
 app.get("/page-jank", function(req, res) {
   res.render("page-jank", {
