@@ -1,9 +1,14 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 30.5px;
+  min-height: 100%;
 }
 
 a {
@@ -89,24 +94,8 @@ img {
 }
 
 /* Page Jank */
-#position {
-  background: #fff;
-  border: 3px solid #333;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 500px;
-  height: 50px;
-  z-index: 9999;
-}
-
-.box {
-  width: 250px;
-  height: 250px;
-  background: green;
-  color: black;
-  margin: 15px;
-  float: left;
-  font-size: 100px;
-  text-align: center;
+.jank-logo {
+  position: absolute;
+  height: 3vw;
+  z-index: 0;
 }

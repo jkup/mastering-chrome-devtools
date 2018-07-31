@@ -1,33 +1,83 @@
 const appRoot = document.getElementById("root");
-const position = document.getElementById("position");
+const addButton = document.querySelector(".add");
+const removeButton = document.querySelector(".remove");
+const originalLogo = document.querySelector(".jank-logo");
 
-window.addEventListener("load", renderText);
-window.addEventListener("scroll", getWindowPosition);
+let rAF;
+let allLogos;
+let count = 10;
+let bodySize = document.body.getBoundingClientRect();
+let logoSize = originalLogo.getBoundingClientRect();
+let maxHeight = Math.floor(bodySize.height - logoSize.height);
 
-function renderText() {
-  for (var i = 0; i < 20000; i++) {
-    const div = document.createElement("div");
-    div.classList.add("box");
-
-    div.innerText = i;
-    appRoot.appendChild(div);
+function init() {
+  if (allLogos) {
+    bodySize = document.body.getBoundingClientRect();
+    for (let i = 0; i < allLogos.length; i++) {
+      document.body.removeChild(allLogos[i]);
+    }
+    document.body.appendChild(originalLogo);
+    logoSize = originalLogo.getBoundingClientRect();
+    document.body.removeChild(originalLogo);
+    maxHeight = Math.floor(bodySize.height - logoSize.height);
   }
+  for (let i = 0; i < count; i++) {
+    let newLogo = originalLogo.cloneNode();
+    let top = Math.floor(Math.random() * maxHeight);
+    if (top === maxHeight) {
+      newLogo.classList.add("up");
+    } else {
+      newLogo.classList.add("down");
+    }
+    newLogo.style.left = i / (count / 97) + "vw";
+    newLogo.style.top = top + "px";
+    document.body.appendChild(newLogo);
+  }
+
+  allLogos = document.querySelectorAll(".jank-logo");
+  count = allLogos.length;
 }
 
-function getWindowPosition() {
-  for (var i = 0; i < 20000; i++) {
-    console.log("Scrolling: " + window.pageYOffset);
+function move() {
+  for (let i = 0; i < allLogos.length; i++) {
+    let currentLogo = allLogos[i];
+    let currentLogoPosition = parseInt(
+      currentLogo.style.top.slice(0, currentLogo.style.top.indexOf("px")),
+      10
+    );
+    currentLogo.classList.contains("down")
+      ? (currentLogoPosition += 3)
+      : (currentLogoPosition -= 3);
+    currentLogo.style.top = currentLogoPosition + "px";
+    if (currentLogoPosition <= 0) {
+      currentLogo.classList.remove("up");
+      currentLogo.classList.add("down");
+    }
+    if (currentLogoPosition >= maxHeight) {
+      currentLogo.classList.remove("down");
+      currentLogo.classList.add("up");
+    }
   }
-  const body = document.body;
-  const html = document.documentElement;
 
-  const height = Math.max(
-    body.scrollHeight,
-    body.offsetHeight,
-    html.clientHeight,
-    html.scrollHeight,
-    html.offsetHeight
-  );
-  const scrollY = window.scrollY;
-  position.innerText = `Your scroll position is ${scrollY} / ${height}`;
+  rAF = window.requestAnimationFrame(move);
 }
+
+addButton.addEventListener("click", () => {
+  count = count + 10;
+  init();
+});
+
+removeButton.addEventListener("click", () => {
+  count = count - 10;
+  init();
+});
+
+window.addEventListener("resize", () => {
+  init();
+});
+
+window.addEventListener("load", () => {
+  appRoot.removeChild(originalLogo);
+  init();
+  rAF = window.requestAnimationFrame(move);
+});
