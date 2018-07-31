@@ -1,12 +1,9 @@
 const express = require("express");
 const imageData = require("./imageData");
 const fs = require("fs");
-// const compression = require('compression')
 const app = express();
 
 app.set("view engine", "pug");
-
-// app.use(compression())
 app.use(express.static("public"));
 
 // Home Page
@@ -14,6 +11,11 @@ app.get("/", function(req, res) {
   res.render("index", {
     scripts: ["main.js"]
   });
+});
+
+// External Resources
+app.get("/resources", function(req, res) {
+  res.render("resources");
 });
 
 // Editing Demo

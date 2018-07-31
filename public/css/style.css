@@ -5,6 +5,15 @@ body {
   line-height: 1.5;
 }
 
+a {
+  color: #5498ef;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 img {
   max-width: 100%;
 }
