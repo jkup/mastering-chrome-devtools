@@ -68,3 +68,8 @@ img {
 .debug-title {
   display: inline-block;
 }
+
+/* Memory Leaks */
+#nodes {
+  visibility: hidden;
+}

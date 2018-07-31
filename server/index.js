@@ -1,5 +1,6 @@
 const express = require("express");
 const imageData = require("./imageData");
+const fs = require("fs");
 // const compression = require('compression')
 const app = express();
 
@@ -35,11 +36,23 @@ app.get("/api", function(req, res) {
   res.send(JSON.stringify(imageData));
 });
 
-// Profiling Demo
-app.get("/profiling", function(req, res) {
-  res.render("profiling", {
-    scripts: ["profiling.js"]
+// Auditing Demo
+app.get("/audit", function(req, res) {
+  res.render("audit", {
+    scripts: ["audit.js"]
   });
+});
+
+// Auditing Demo
+app.get("/node", function(req, res) {
+  let characters = "";
+
+  for (var i = 0; i < 100; i++) {
+    let foo = fs.readFileSync(__dirname + "/really_long_file.txt", {
+      encoding: "utf8"
+    });
+  }
+  res.render("node");
 });
 
 // Timing Demo
@@ -61,22 +74,22 @@ app.get("/memory-leaks", function(req, res) {
   });
 });
 
-app.get("/memory-leaks/accidental-globals", function(req, res) {
-  res.render("memory-leaks/accidental-globals", {
-    scripts: ["accidental-globals.js"]
+app.get("/memory-leaks/one", function(req, res) {
+  res.render("memory-leaks/one");
+});
+
+app.get("/memory-leaks/two", function(req, res) {
+  res.render("memory-leaks/two");
+});
+
+app.get("/memory-leaks/three", function(req, res) {
+  res.render("memory-leaks/three", {
+    scripts: ["memory-leaks.js"]
   });
 });
 
-app.get("/memory-leaks/callbacks-and-timers", function(req, res) {
-  res.render("memory-leaks/callbacks-and-timers");
-});
-
-app.get("/memory-leaks/forgotten-dom", function(req, res) {
-  res.render("memory-leaks/forgotten-dom");
-});
-
-app.get("/memory-leaks/closures", function(req, res) {
-  res.render("memory-leaks/closures");
+app.get("/memory-leaks/four", function(req, res) {
+  res.render("memory-leaks/four");
 });
 
 app.listen(3000, function() {
