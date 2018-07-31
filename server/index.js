@@ -64,7 +64,9 @@ app.get("/timing", function(req, res) {
 
 // Page Jank Demo
 app.get("/page-jank", function(req, res) {
-  res.render("page-jank");
+  res.render("page-jank", {
+    scripts: ["page-jank.js"]
+  });
 });
 
 // Memory Leaks

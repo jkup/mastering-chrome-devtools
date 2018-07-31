@@ -73,3 +73,26 @@ img {
 #nodes {
   visibility: hidden;
 }
+
+/* Page Jank */
+#position {
+  background: #fff;
+  border: 3px solid #333;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 50px;
+  z-index: 9999;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  background: green;
+  color: black;
+  margin: 15px;
+  float: left;
+  font-size: 100px;
+  text-align: center;
+}
