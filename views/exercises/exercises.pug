@@ -1,0 +1,32 @@
+extends ../layout.pug
+
+block content
+    h1 Mastering Chrome DevTools
+
+    h2 The workshop is divided into multiple sections:
+
+    ol
+      li
+        a(href='/exercises/editing') Editing
+        span - Changing styles and markup and persisting those changes to disk.
+      li
+        a(href='/exercises/debugging') Debugging
+        span - Using the step-through debugger to fix a buggy program.
+      li
+        a(href='/exercises/audit') Auditing
+        span - Audit a slow page and figure out what's causing its slowness.
+      li
+        a(href='/exercises/node') Node Debugging
+        span - Something is wrong with our Node.js app, can you find out why it's so slow?
+      li
+        a(href='/exercises/mark-and-measure') Mark and Measure
+        span - Use the Performance API to mark and measure real user performance.
+      li
+        a(href='/exercises/srcset') Image Srcset
+        span - Find images that are too large and use srcsets to provide a better experience.
+      li
+        a(href='/exercises/page-jank') Page Jank
+        span - Try to identify page jank without tooling. Then use the DevTools to fix it!
+      li
+        a(href='/exercises/memory-leaks') Memory Leaks
+        span - One of these pages has a memory leak. Can you spot which one?

@@ -31,6 +31,7 @@ img {
 
 .nav {
   background: #4e87ed;
+  margin-bottom: 100px;
 }
 
 .nav-inner {
@@ -62,6 +63,33 @@ img {
 .nav .logo {
   font-weight: bold;
   font-size: 22px;
+}
+
+/* Editing */
+.editing li {
+  color: #333;
+  font-size: 25px;
+  margin-bottom: 500px;
+}
+
+.SomeClass {
+  color: red;
+}
+
+#SomeId {
+  color: purple;
+}
+
+.redBorder {
+  border: 2px dotted red;
+  display: inline-block;
+  padding: 10px;
+}
+
+.blueBorder {
+  border: 2px dotted blue;
+  display: inline-block;
+  padding: 10px;
 }
 
 /* Debugging */

@@ -13,21 +13,28 @@ app.get("/", function(req, res) {
   });
 });
 
+// Exercises page
+app.get("/exercises", function(req, res) {
+  res.render("exercises/exercises", {
+    scripts: ["main.js"]
+  });
+});
+
 // External Resources
 app.get("/resources", function(req, res) {
   res.render("resources");
 });
 
 // Editing Demo
-app.get("/editing", function(req, res) {
-  res.render("editing", {
+app.get("/exercises/editing", function(req, res) {
+  res.render("exercises/editing", {
     scripts: ["editing.js"]
   });
 });
 
 // Debugging Demo
-app.get("/debugging", function(req, res) {
-  res.render("debugging", {
+app.get("/exercises/debugging", function(req, res) {
+  res.render("exercises/debugging", {
     scripts: ["debugging.js"]
   });
 });
@@ -39,14 +46,14 @@ app.get("/api", function(req, res) {
 });
 
 // Auditing Demo
-app.get("/audit", function(req, res) {
-  res.render("audit", {
+app.get("/exercises/audit", function(req, res) {
+  res.render("exercises/audit", {
     scripts: ["audit.js"]
   });
 });
 
 // Auditing Demo
-app.get("/node", function(req, res) {
+app.get("/exercises/node", function(req, res) {
   let characters = "";
 
   for (var i = 0; i < 100; i++) {
@@ -54,51 +61,64 @@ app.get("/node", function(req, res) {
       encoding: "utf8"
     });
   }
-  res.render("node");
+  res.render("exercises/node");
 });
 
 // Timing Demo
-app.get("/mark-and-measure", function(req, res) {
-  res.render("mark-and-measure", {
+app.get("/exercises/mark-and-measure", function(req, res) {
+  res.render("exercises/mark-and-measure", {
     scripts: ["mark-and-measure.js"]
   });
 });
 
 // Srcset Demo
-app.get("/srcset", function(req, res) {
-  res.render("srcset");
+app.get("/exercises/srcset", function(req, res) {
+  res.render("exercises/srcset");
 });
 
 // Page Jank Demo
-app.get("/page-jank", function(req, res) {
-  res.render("page-jank", {
+app.get("/exercises/page-jank", function(req, res) {
+  res.render("exercises/page-jank", {
     scripts: ["page-jank.js"]
   });
 });
 
 // Memory Leaks
-app.get("/memory-leaks", function(req, res) {
-  res.render("memory-leaks/index", {
+app.get("/exercises/memory-leaks", function(req, res) {
+  res.render("exercises/memory-leaks/index", {
     scripts: ["memory-leaks.js"]
   });
 });
 
-app.get("/memory-leaks/one", function(req, res) {
-  res.render("memory-leaks/one");
+app.get("/exercises/memory-leaks/one", function(req, res) {
+  res.render("exercises/memory-leaks/one");
 });
 
-app.get("/memory-leaks/two", function(req, res) {
-  res.render("memory-leaks/two");
+app.get("/exercises/memory-leaks/two", function(req, res) {
+  res.render("exercises/memory-leaks/two");
 });
 
-app.get("/memory-leaks/three", function(req, res) {
-  res.render("memory-leaks/three", {
+app.get("/exercises/memory-leaks/three", function(req, res) {
+  res.render("exercises/memory-leaks/three", {
     scripts: ["memory-leaks.js"]
   });
 });
 
-app.get("/memory-leaks/four", function(req, res) {
-  res.render("memory-leaks/four");
+app.get("/exercises/memory-leaks/four", function(req, res) {
+  res.render("exercises/memory-leaks/four");
+});
+
+// Lessons
+app.get("/lessons/editing", function(req, res) {
+  res.render("lessons/editing", {
+    scripts: ["lesson-editing.js"]
+  });
+});
+
+app.get("/lessons/debugging", function(req, res) {
+  res.render("lessons/debugging", {
+    scripts: ["lesson-debugging.js"]
+  });
 });
 
 app.listen(3000, function() {
