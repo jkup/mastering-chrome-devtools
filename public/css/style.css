@@ -92,6 +92,10 @@ img {
   padding: 10px;
 }
 
+.editingLink:hover {
+  color: pink;
+}
+
 /* Debugging */
 
 #fetcher {
