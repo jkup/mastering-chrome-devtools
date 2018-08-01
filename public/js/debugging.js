@@ -1,34 +1,36 @@
-$("#github").on("submit", function() {
-  var user = $("#user");
+const appRoot = document.getElementById("root");
+const fetcher = document.getElementById("fetcher");
+fetcher.addEventListener("click", fetchImages);
 
-  emptyCurrentList();
-
-  // Using the github API https://developer.github.com/v3/repos/#list-user-repositories
-  $.ajax({
-    url: "https://api.github.com/users/" + user + "/repos?client_id=1699520b1a1353e2d28f&client_secret=19f0b5d59aa52197d1c3e59ce8d85233738cda20",
-    success: function(repos) {
-      iterateThroughData(repos);
-    },
-    error: function(data) {
-      insertError();
-    }
-  });
-});
-
-function iterateThroughData(repos) {
-  _.forEachRight(repos, function(repo) {
-    insertHTML(repo);
+function fetchImages() {
+  fetch("/api").then(data => {
+    processImages(data.imageList);
   });
 }
 
-function insertHTML(repo) {
-  $("#repositories").append("<li>" + repo.title + "</li>");
-}
+function processImages(images) {
+  const list = document.createElement("ul");
+  images.forEach(element => {
+    // Create elements
+    const item = document.createElement("li");
+    const title = document.createElement("h2");
+    const author = document.createElement("span");
+    const image = new Image();
 
-function emptyCurrentList() {
-  $("#repositories").empty();
-}
+    // Style elements
+    item.classList.add("debug-card");
+    title.classList.add("debug-title");
+    author.classList.add("debug-author");
 
-function insertError() {
-  $("#repositories").append("<li>Uh oh, we're having a problem!</li>");
+    // Populate elements
+    title.innerText = element.photographer;
+    author.innerText = ` by ${element.title}`;
+    image.src = element.source;
+
+    // Append elements
+    item.appendChild(title);
+    item.appendChild(author);
+    item.appendChild(image);
+    list.appendChild(item);
+  });
 }

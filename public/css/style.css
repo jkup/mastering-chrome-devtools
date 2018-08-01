@@ -1,137 +1,170 @@
+html {
+  height: 100%;
+}
+
 body {
-  font-family: 'Muli', sans-serif;
-  font-size: 18px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30.5px;
+  min-height: 100%;
 }
 
-h1 {}
-
-h2 {}
-
-h3 {}
-
-h4 {}
-
-h5 {}
-
-body .navbar-default {
-  background: #00c6ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border: 1px solid #0071FD;
-}
-
-body .navbar-default .navbar-brand,
-body .navbar-default .navbar-nav>li>a {
-  color: #FFF;
-}
-
-body .navbar-default .navbar-brand:hover,
-body .navbar-default .navbar-nav>li>a:hover {
-  color: #EEE;
-  /* text-decoration: underline; */
-}
-
-body .navbar-default .navbar-collapse, .navbar-default .navbar-form,
-body .navbar-default .navbar-toggle {
-  border-color: #0071FD;
-}
-
-blockquote {
-  margin-top: 250px;
-}
-
-.main-content {
-  margin-top: 50px;
-}
-
-p {
-  margin: 20px 0;
-}
-
-#box {
-  width: 100px;
-  height: 100px;
-  background: blue;
+a {
+  color: #4e87ed;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #FF33CC;
+  text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.nav {
+  background: #4e87ed;
+  margin-bottom: 100px;
+}
+
+.nav-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav a {
+  color: #ffffff;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #eeeeee;
+}
+
+.nav .logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Editing */
+.lessonList li {
+  color: #333;
+  font-size: 25px;
+  margin-bottom: 500px;
+}
+
+.SomeClass {
+  color: red;
+}
+
+#SomeId {
+  color: purple;
+}
+
+.redBorder {
+  border: 2px dotted red;
+  display: inline-block;
+  padding: 10px;
+}
+
+.blueBorder {
+  border: 2px dotted blue;
+  display: inline-block;
+  padding: 10px;
+}
+
+.editingLink:hover {
+  color: pink;
+}
+
+.states {
+  color: red;
+}
+
+.states:hover {
+  color: darkorange;
+}
+
+.states:active {
+  color: blue;
+}
+
+.states:visited {
+  color: green;
+}
+
+/* Debugging */
+
+#fetcher {
+  background-color: #007bff;
+  border-color: #0062cc;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+#fetcher:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.debug-card {
+  list-style: none;
+}
+
+.debug-title {
+  display: inline-block;
+}
+
+/* Memory Leaks */
 #nodes {
-  display: none;
+  visibility: hidden;
 }
 
-.list {
-
+/* Page Jank */
+.jank-logo {
+  position: absolute;
+  height: 3vw;
+  z-index: 0;
 }
 
-.error {
-  /*color: #841717;*/
+.add,
+.remove {
+  position: relative;
+  z-index: 9999;
 }
 
-/* ***** AD CODE STYLING ***** */
+/* Profiling */
 
-.carbon-ad-container {
-  position: fixed;
-  top: 60px;
-}
-
-.carbon-wrap{
-	display: block;
-	background: #f1f1f1;
-	padding: 15px 15px 10px 15px;
-}
-.carbon-wrap a {
-    display: block;
-}
-
-.carbon-img {
-    float: left;
-    margin-right: 10px;
-}
-
-.carbon-text {
-    font-size: 80%;
-    line-height: 130%;
-    min-width: 120px;
-    color: #06c;
-}
-
-.carbon-poweredby {
-    color: #6e6e6e;
-    text-decoration: underline;
-    font-size: 65%;
-    font-style: italic;
-    text-align: center;
-    display: block;
-    margin: 8px 0 0 0;
-}
-
-.cf:before,.cf:after, .carbon-wrap:before, .carbon-wrap:after{content:"";display:table;}
-.cf:after, .carbon-wrap:after{clear:both;}
-.cf, .carbon-wrap{zoom:1;}
-
-.menu-animation-wrapper {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-body .thumbnail {
-  background-color: #EEE;
-}
-
-.thumbnail .glyphicon {
-  font-size: 30px;
-  margin-top: 25px;
-}
-
-.tab-content {
-  border: 1px solid #DDD;
-  border-top: 0;
-  padding: 25px;
+.box {
+  width: 200px;
+  height: 200px;
+  background: green;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  float: left;
+  margin: 25px;
+  line-height: 200px;
 }

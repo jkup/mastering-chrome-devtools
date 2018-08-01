@@ -34,3 +34,5 @@ node_modules
 
 # VScode
 .vscode
+
+.DS_Store

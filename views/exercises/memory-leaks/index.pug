@@ -1,0 +1,14 @@
+extends ../../layout.pug
+
+block content
+    h1 There is a memory leak on one of the pages below!
+    div Can you figure out which one?
+    ul
+      li
+        a(href="/exercises/memory-leaks/one") Maybe this page
+      li
+        a(href="/exercises/memory-leaks/two") Probably this one
+      li
+        a(href="/exercises/memory-leaks/three") What about this?
+      li
+        a(href="/exercises/memory-leaks/four") Definitely not this page!
