@@ -121,6 +121,18 @@ app.get("/lessons/debugging", function(req, res) {
   });
 });
 
+app.get("/lessons/profiling", function(req, res) {
+  res.render("lessons/profiling", {
+    scripts: ["lesson-profiling.js"]
+  });
+});
+
+app.get("/lessons/memory-leaks", function(req, res) {
+  res.render("lessons/memory-leaks", {
+    scripts: ["lesson-memory-leaks.js"]
+  });
+});
+
 app.listen(3000, function() {
   console.log("Example app listening on port http://localhost:3000");
 });

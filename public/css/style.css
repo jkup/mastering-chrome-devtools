@@ -96,6 +96,22 @@ img {
   color: pink;
 }
 
+.states {
+  color: red;
+}
+
+.states:hover {
+  color: darkorange;
+}
+
+.states:active {
+  color: blue;
+}
+
+.states:visited {
+  color: green;
+}
+
 /* Debugging */
 
 #fetcher {
@@ -130,4 +146,25 @@ img {
   position: absolute;
   height: 3vw;
   z-index: 0;
+}
+
+.add,
+.remove {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Profiling */
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: green;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  float: left;
+  margin: 25px;
+  line-height: 200px;
 }

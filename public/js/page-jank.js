@@ -6,6 +6,7 @@ const originalLogo = document.querySelector(".jank-logo");
 let rAF;
 let allLogos;
 let count = 10;
+let distance = 3;
 let bodySize = document.body.getBoundingClientRect();
 let logoSize = originalLogo.getBoundingClientRect();
 let maxHeight = Math.floor(bodySize.height - logoSize.height);
@@ -41,19 +42,17 @@ function init() {
 function move() {
   for (let i = 0; i < allLogos.length; i++) {
     let currentLogo = allLogos[i];
-    let currentLogoPosition = parseInt(
-      currentLogo.style.top.slice(0, currentLogo.style.top.indexOf("px")),
-      10
-    );
-    currentLogo.classList.contains("down")
-      ? (currentLogoPosition += 3)
-      : (currentLogoPosition -= 3);
+    let currentLogoPosition = currentLogo.classList.contains("down")
+      ? currentLogo.offsetTop + distance
+      : currentLogo.offsetTop - distance;
+    if (currentLogoPosition < 0) currentLogoPosition = 0;
+    if (currentLogoPosition > maxHeight) currentLogoPosition = maxHeight;
     currentLogo.style.top = currentLogoPosition + "px";
-    if (currentLogoPosition <= 0) {
+    if (currentLogo.offsetTop === 0) {
       currentLogo.classList.remove("up");
       currentLogo.classList.add("down");
     }
-    if (currentLogoPosition >= maxHeight) {
+    if (currentLogo.offsetTop === maxHeight) {
       currentLogo.classList.remove("down");
       currentLogo.classList.add("up");
     }
@@ -63,12 +62,14 @@ function move() {
 }
 
 addButton.addEventListener("click", () => {
-  count = count + 10;
+  count = count + 50;
   init();
 });
 
 removeButton.addEventListener("click", () => {
-  count = count - 10;
+  if (count >= 50) {
+    count = count - 50;
+  }
   init();
 });
 
