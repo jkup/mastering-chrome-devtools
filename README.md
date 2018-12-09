@@ -1,6 +1,6 @@
 # Mastering Chrome DevTools
 
-A web app for teaching people about Chrome DevTools. This is the website is the course materials for the [Chrome Dev Tools course](https://frontendmasters.com/courses/chrome-dev-tools-v2/) on Frontend Masters.
+A web app for teaching people about Chrome DevTools. This is the website is the course materials for the [Learning Chrome Dev Tools Course](https://frontendmasters.com/courses/chrome-dev-tools-v2/) on Frontend Masters.
 
 ## How to use
 
