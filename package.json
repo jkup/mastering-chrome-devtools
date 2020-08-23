@@ -4,9 +4,9 @@
   "description": "An example web site for Chrome DevTools workshops",
   "main": "server/index.js",
   "dependencies": {
-    "compression": "^1.6.2",
-    "express": "^4.14.0",
-    "pug": "^2.0.0-beta6"
+    "compression": "1.7.4",
+    "express": "4.17.1",
+    "pug": "3.0.0"
   },
   "devDependencies": {},
   "scripts": {
