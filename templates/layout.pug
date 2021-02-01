@@ -1,0 +1,22 @@
+html
+    head
+        title Hello World
+        style
+            include main.css
+            include baseline.css
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Cabin&family=Roboto:wght@700&display=swap' rel='stylesheet')
+    body
+        nav
+            ul
+                li
+                    a(href="/") Introduction to Chrome DevTools v3
+                li
+                    a(href="/lessons") Lessons
+                li
+                    a(href="/exercises") Exercises
+        article#main
+            block content
+        block footer
+        footer#footer
+            Some footer content

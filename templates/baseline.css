@@ -1,0 +1,535 @@
+/*
+    Comment-A: 
+    rem for left-right, for consistent alignment.
+    em for top/bottom, so the spacing is relative to font-size  
+*/
+:root {
+  /*===== 
+    #Color #Palette 
+    Variables follow convention found here: https://codepen.io/paceaux/pen/XdxQza
+    Color is a dark, dark gray rgb (55, 55, 55). All grays and base line styles are multiples of this
+    Using a "base value", all colors are a multiple of 55
+=====*/
+  --colorNeutralDarker: rgb(
+    55,
+    55,
+    55
+  ); /*base:           #373737;    hsl(22%, 22%, 22%) */
+  --colorNeutralDark: rgb(
+    110,
+    110,
+    110
+  ); /*  base * 2:  #6e6e6e;      hsl(0, 0%, 43%) */
+  --colorNeutral: rgb(
+    165,
+    165,
+    165
+  ); /* base * 3:   #a5a5a5;      hsl(0, 0%, 65%) */
+  --colorNeutralLight: rgb(
+    192.5,
+    192.5,
+    192.5
+  ); /*base * 3.5: #c1c1c1;      hsl(0, 0%, 75%) */
+  --colorNeutralLighter: rgb(
+    220,
+    220,
+    220
+  ); /*  base * 4:    #dcdcdc;       hsl(0, 0%, 86%) */
+  --colorCool: rgb(110, 165, 220); /*   #6ea5dc; hsl(210, 61%, 65%);  */
+  --colorCoolDarker: rgb(110, 165, 193); /* #6ea5c1;  hsl (200,40%,59%) */
+
+  /*===== 
+    #Color #Link #Border 
+    Variables follow convention found here: https://gist.github.com/paceaux/8638765e747f5bd6387b721cde99e066#sassscssstylus-naming
+=====*/
+  --baseTextColor: var(--colorNeutralDarker);
+  --baseEditorialTextColor: var(--colorNeutralDark);
+  --baseLinkColor: var(--colorCool);
+  --baseLinkColorHover: var(--colorCoolDarker);
+  --baseInlineBorderColor: var(--colorNeutralLight);
+
+  /*===== 
+    #LineHeight 
+=====*/
+  --baseLineHeight: 1.618;
+  --smallLineHeight: 1.2;
+
+  /*===== 
+    #Body #Size #Paragraph #content-flow
+=====*/
+  --biggestTextSize: 1.3em;
+  --biggerTextSize: 1.2em;
+  --bigTextSize: 1.1em;
+  --baseTextSize: 1em;
+  --smallTextSize: 0.8em;
+  --smallerTextSize: 0.75em;
+  --smallestTextSize: 0.618em;
+
+  /*===== 
+    #Heading #Title #Size
+    The small title sizes use the big text sizes; so they overlap
+    They're here, though, so that, if desired, we can deviate and not have them overlap
+=====*/
+  --biggestTitleSize: 2.617924em; /* (16 x 1.618) x 1.618 */
+  --bigTitleSize: 1.618em;
+  --baseTitleSize: 1.5em;
+  --smallTitleSize: var(--biggestTextSize);
+  --smallerTitleSize: var(--biggerTextSize);
+  --smallestTitleSize: var(--bigTextSize);
+
+  /*===== 
+    #Font #FontFamilies #Typeface #Code  #Heading #Paragraphs ===
+    base is meant to be what's applied to the majority of body copy
+    title could also be called "headline", but would be  w/ other vars
+=====*/
+  --baseFontFamily: Georgia, "Times New Roman", serif;
+  --titleFontFamily: Helvetica, Arial, sans-serif;
+  --codeFontFamily: monospace;
+}
+
+html {
+  color: #373737;
+  color: var(--baseTextColor);
+  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--baseFontFamily);
+  font-size: calc(
+    0.5vw + 1rem
+  ); /* the font-size can scale up as the browser window gets larger, but doesn't get hard to read when the browser window shrinks*/
+  line-height: 1.168;
+  line-height: var(--baseLineHeight);
+}
+
+/*=====
+  #Everything
+=====*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+pre {
+  line-height: 1.618;
+  line-height: var(--baseLineHeight);
+  margin: 0 0.618rem 0 0.618rem; /* Comment-A */
+}
+
+/*=====
+  #Headings
+=====*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.2;
+  line-height: var(--smallLineHeight);
+  margin-bottom: calc(
+    1.618vmin - 1vmax + 0.35em
+  ); /* increases margin as screen width gets smaller */
+}
+
+h1 {
+  font-size: 2.617924em;
+  font-size: var(--biggestTitleSize);
+}
+
+h2 {
+  font-size: 1.618em;
+  font-size: var(--bigTitleSize);
+}
+
+h3 {
+  font-size: 1.5em;
+  font-size: var(--baseTitleSize);
+}
+
+h4 {
+  font-size: 1.3em;
+  font-size: var(--smallTitleSize);
+}
+
+h5 {
+  font-size: 1.2em;
+  font-size: var(--smallerTitleSize);
+}
+
+h6 {
+  font-size: 1.1em;
+  font-size: var(--smallestTitleSize);
+}
+
+/*=====
+  #Lists
+=====*/
+
+ul,
+ol,
+dl {
+  padding: 0.618em 0.618rem; /* Comment-A */
+}
+
+li {
+  text-indent: -0.9em;
+  line-height: 1.618;
+  line-height: var(--baseLineHeight);
+  padding: 0;
+  margin: 0 0 0 0.618rem;
+}
+
+li {
+  list-style-position: inside;
+}
+
+dt {
+  text-indent: -0.618rem;
+}
+
+dd {
+  margin: 0;
+  padding: 0 0.618rem 0 0.618rem;
+}
+
+/*=====
+  #Paragraphs #Blocks
+=====*/
+
+hr {
+  color: #a5a5a5;
+  color: var(--colorNeutral);
+  border-width: 0.0625em;
+  border-style: solid;
+  margin: 1.618em 0.618rem;
+}
+
+p,
+blockquote {
+  line-height: 1.618;
+  line-height: var(--baseLineHeight);
+}
+
+p {
+  font-size: 1em;
+  font-size: var(--baseTextSize);
+  margin-bottom: 0.618em;
+}
+
+/* Credit where it's due:
+    https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+*/
+blockquote {
+  background: rgba(165, 165, 165, 0.15);
+  border-left: 10px solid#dcdcdc;
+  border-left: 10px solid var(--colorNeutralLighter);
+  margin: 1.618em 0.618rem; /* Comment-A */
+  padding: 0.618em 0.618rem;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote::before {
+  color: #c1c1c1;
+  color: var(--colorNeutralLight);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+/*=====
+  #Content-Flow
+=====*/
+
+em,
+i,
+cite {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+cite {
+  display: block;
+  text-align: right;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px dotted red;
+}
+
+small,
+sub,
+sup {
+  font-size: 0.618em;
+  font-size: var(--smallestTextSize);
+  line-height: 1;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
+}
+
+/*=====
+  #Content-Flow #editorial
+=====*/
+
+s,
+strike,
+del,
+ins {
+  color: #6e6e6e;
+  color: var(--baseEditorialTextColor);
+}
+
+s,
+strike,
+del {
+  text-decoration: strikethrough;
+}
+
+ins,
+del {
+  background-color: rgba(220, 220, 220, 0.25);
+}
+
+ins {
+  text-decoration: none;
+}
+
+/*
+mark and selection should be different, so user knows which one they've selected.
+mark and selections:
+  saturation: 44%
+  lightness: 75%
+Hue is different
+*/
+
+mark {
+  background-color: rgba(165, 220, 165, 0.9);
+}
+
+::selection {
+  background-color: rgba(165, 220, 220, 0.9);
+}
+
+/* Because mark and selection have same saturation, brightenss, mark won't easily stand out if it's selected */
+mark::selection {
+  background-color: rgba(165, 220, 110, 0.9);
+}
+
+/* dfn and dt both do the same thing: denote a term to be defined */
+dfn,
+dt {
+  font-style: oblique;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/*=====
+#Content-flow #Code
+=====*/
+
+pre,
+code,
+var,
+samp,
+data {
+  font-family: monospace;
+  font-family: var(--codeFontFamily);
+}
+
+kbd,
+samp,
+data {
+  background-color: rgba(165, 165, 165, 0.2);
+}
+
+kbd {
+  font-size: 0.75em;
+  font-size: var(--smallerTextSize);
+  padding: 0.25ex 0.5ex;
+  border: 1px solid #c1c1c1;
+  border: 1px solid var(--baseInlineBorderColor);
+  border-radius: 3px;
+}
+
+/*Treat samp like a mini blockquote. because basically you're quoting what the computer would do*/
+samp,
+data {
+  padding: 0 10px;
+}
+
+var,
+data {
+  font-style: italic;
+}
+
+samp {
+  border-left: 5px solid #c1c1c1;
+  border-left: 5px solid var(--baseInlineBorderColor);
+}
+
+data {
+  padding: 0 10px;
+}
+
+pre {
+  font-size: 0.75em;
+  font-size: var(--smallerTextSize);
+  line-height: 1.2;
+  line-height: var(--smallLineHeight);
+  padding: 0.618em 0.618rem;
+  border: 1px solid #c1c1c1;
+  border: 1px solid var(--baseInlineBorderColor);
+  border-radius: 2px;
+  overflow: scroll;
+}
+
+/*=====
+  #Ruby
+=====*/
+
+ruby {
+  display: ruby;
+  position: relative;
+  margin: 0 0.5ex;
+  -webkit-ruby-position: before;
+  ruby-position: over;
+  ruby-position: before;
+}
+
+rtc,
+rbc {
+  font-size: inherit;
+  line-height: 1;
+  ruby-align: start;
+}
+
+rt {
+  display: ruby-text;
+  font-size: 0.7em;
+}
+
+rt + rt {
+  margin-left: 0.5ex;
+}
+
+rtc > bdo {
+  display: -webkit-ruby-text-container;
+  display: ruby-base-container;
+}
+
+/*complex ruby for chrome and Edge*/
+/*only FF has "complete" ruby support*/
+@supports (ruby-align: left) or (not (display: ruby-base-container)) {
+  ruby {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: 1em;
+    line-height: 1;
+  }
+
+  rtc,
+  rt {
+    order: -1;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  rtc {
+    display: inline-flex;
+  }
+}
+
+/*Edge fixes*/
+@supports ((ruby-align: left)) {
+  rtc {
+    justify-content: space-between;
+  }
+
+  rt {
+    display: inline-flex;
+  }
+}
+
+/*=====
+#Links
+=====*/
+
+a {
+  color: #6ea5dc;
+  color: var(--baseLinkColor);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: #6ea5c1;
+  color: var(--baseLinkColorHover);
+  border-color: #6ea5c1;
+  border-color: var(--baseLinkColorHover);
+  outline: none;
+}
+
+a:active {
+  border-style: solid;
+}
+
+/*==========
+#Table
+==========*/
+
+table {
+  font-size: 0.8em;
+  font-size: var(--smallTextSize);
+}
+
+caption {
+  font-size: 1em;
+  font-size: var(--baseTextSize);
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: middle;
+  line-height: 1.2;
+  line-height: var(--smallLineHeight);
+  padding: 0.4em 0.618rem;
+}
+
+th {
+  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--titleFontFamily);
+  font-weight: bold;
+  font-size: 1.3em;
+  font-size: var(--smallTitleSize); /*treat th in a body as h4*/
+}
+
+thead th,
+tfoot th {
+  font-size: 1.5em;
+  font-size: var(--baseTitleSize); /*treat th in header/footer as h3*/
+}
