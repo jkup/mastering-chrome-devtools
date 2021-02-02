@@ -1,3 +1,4 @@
+const fs = require("fs");
 const path = require("path");
 const fastify = require("fastify")({ logger: true });
 
@@ -30,11 +31,28 @@ fastify.get("/lessons", async (request, reply) => {
 
 fastify.get("/lesson/:lessonId", async (request, reply) => {
   const id = request.params.lessonId;
-  const md = await reply.markdown(
+  const markdown = await reply.markdown(
     path.join(__dirname, "..", `/markdown/lessons/${id}.md`)
   );
+
+  let script, link;
+
+  // Check for static files
+  let jsPath = path.join(__dirname, "..", `/public/lessons/js/${id}.js`);
+  let cssPath = path.join(__dirname, "..", `/public/lessons/css/${id}.css`);
+
+  if (fs.existsSync(jsPath)) {
+    script = `/lessons/js/${id}.js`;
+  }
+
+  if (fs.existsSync(cssPath)) {
+    link = `/lessons/css/${id}.css`;
+  }
+
   reply.view(`/templates/index.pug`, {
-    markdown: md,
+    markdown,
+    script,
+    link,
   });
 });
 
@@ -45,11 +63,28 @@ fastify.get("/exercises", async (request, reply) => {
 
 fastify.get("/exercise/:exerciseId", async (request, reply) => {
   const id = request.params.exerciseId;
-  const md = await reply.markdown(
+  const markdown = await reply.markdown(
     path.join(__dirname, "..", `/markdown/exercises/${id}.md`)
   );
+
+  let script, link;
+
+  // Check for static files
+  let jsPath = path.join(__dirname, "..", `/public/exercises/js/${id}.js`);
+  let cssPath = path.join(__dirname, "..", `/public/exercises/css/${id}.css`);
+
+  if (fs.existsSync(jsPath)) {
+    script = `/exercises/js/${id}.js`;
+  }
+
+  if (fs.existsSync(cssPath)) {
+    link = `/exercises/css/${id}.css`;
+  }
+
   reply.view(`/templates/index.pug`, {
-    markdown: md,
+    markdown,
+    script,
+    link,
   });
 });
 

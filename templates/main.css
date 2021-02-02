@@ -1,8 +1,20 @@
 body {
-  background-color: #2a66c4;
+  background-color: #e8eaed;
   color: #000;
   font-family: "Cabin", sans-serif;
+  font-size: 18.5px !important;
+  line-height: 1.5;
   text-rendering: optimizelegibility;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 4px solid #ce5b4c;
+  cursor: pointer;
 }
 
 img {
@@ -10,38 +22,66 @@ img {
 }
 
 nav {
-  background-color: #fff;
+  background-color: #1a73e8;
   border-bottom: 2px solid #0d314a;
-  color: #000;
+  color: #fff;
   height: 72px;
   line-height: 72px;
 }
 
 nav ul {
   list-style: none;
+  margin: 0;
 }
 
 nav ul li {
-  float: left;
-  margin-left: 25px;
+  display: inline;
+  margin: 0 25px 0 10px;
 }
 
 nav a {
   font-family: "Roboto", sans-serif;
-  color: #000;
+  flex-direction: column;
+  color: #fff;
   font-weight: bold;
-  float: left;
-  margin-right: 25px;
   font-size: 20px;
   text-decoration: none;
+  line-height: 70px;
+}
+
+nav a:hover {
+  color: #fff;
+  border-bottom: 5px solid #fff;
 }
 
 #main,
 #footer {
   background: #fff;
+  border-top: 2px solid #cf5d4e;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   padding: 30px;
   max-width: 1200px;
   margin: 50px auto;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
 
 /* CSS RESET */
@@ -146,9 +186,6 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
 blockquote,
 q {
   quotes: none;
@@ -179,26 +216,43 @@ p {
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
+
+ol,
+ul {
+  padding-left: 2rem;
+}
+
+ol,
 ul,
-ol {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
-ul li,
-ol li {
-  line-height: 1.5rem;
-}
+
+ol ol,
 ul ul,
 ol ul,
-ul ol,
-ol ol {
-  margin-top: 0;
+ul ol {
   margin-bottom: 0;
 }
+
 blockquote {
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  background: rgba(165, 165, 165, 0.15);
+  border-left: 10px solid#dcdcdc;
+  border-left: 10px solid rgb(192.5, 192.5, 192.5);
+  margin: 1.618em 0.618rem; /* Comment-A */
+  padding: 0.618em 0.618rem;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote::before {
+  color: #c1c1c1;
+  color: rgb(192.5, 192.5, 192.5);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
 /* Headings */
 h1,
@@ -210,30 +264,28 @@ h6 {
   /* Change heading typefaces here */
   font-family: sans-serif;
   margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   line-height: 1.5rem;
 }
 h1 {
-  font-size: 4.242rem;
-  line-height: 4.5rem;
-  margin-top: 3rem;
+  font-size: 40px;
+  line-height: 48px;
 }
 h2 {
-  font-size: 2.828rem;
-  line-height: 3rem;
-  margin-top: 3rem;
+  font-size: 32px;
+  line-height: 38.4px;
 }
 h3 {
-  font-size: 1.414rem;
+  font-size: 28px;
+  line-height: 33.6px;
 }
 h4 {
-  font-size: 0.707rem;
+  font-size: 24px;
+  line-height: 28.8px;
 }
 h5 {
-  font-size: 0.4713333333333333rem;
-}
-h6 {
-  font-size: 0.3535rem;
+  font-size: 20px;
+  line-height: 24px;
 }
 /* Tables */
 table {

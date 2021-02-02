@@ -1,0 +1,26 @@
+#wrapper {
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
+  margin: 150px auto;
+  width: 550px;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+li {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #eee;
+  text-indent: 25px;
+}
+
+input {
+  box-sizing: border-box;
+  text-indent: 25px;
+  width: 550px;
+  height: 50px;
+  line-height: 50px;
+}

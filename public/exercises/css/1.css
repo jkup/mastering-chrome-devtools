@@ -1,0 +1,41 @@
+blockquote {
+  background-color: red;
+}
+
+.quote {
+  background-color: orange;
+}
+
+#quote {
+  background-color: yellow !important;
+}
+
+.card {
+  border-radius: 6px;
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  border: 3px solid black;
+  margin: 25px 0;
+}
+
+.card:nth-child(1n) {
+  border-color: red;
+}
+
+.card:nth-child(2n) {
+  border-color: orange;
+}
+
+.card:nth-child(3n) {
+  border-color: yellow;
+}
+
+.card:nth-child(4n) {
+  border-color: green;
+}
+
+.card:nth-child(5n) {
+  border-color: blue;
+}

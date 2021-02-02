@@ -3,7 +3,9 @@ html
         title Hello World
         style
             include main.css
-            include baseline.css
+            include prism.css
+        if link
+            link(rel="stylesheet", href=link)
         link(rel='preconnect' href='https://fonts.gstatic.com')
         link(href='https://fonts.googleapis.com/css2?family=Cabin&family=Roboto:wght@700&display=swap' rel='stylesheet')
     body
@@ -19,4 +21,7 @@ html
             block content
         block footer
         footer#footer
-            Some footer content
+            div Jon Kuperman
+        script(src="/js/prism.js")
+        if script
+            script(src=script)
