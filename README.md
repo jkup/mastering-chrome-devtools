@@ -1,6 +1,8 @@
-# Mastering Chrome DevTools
+# Introduction to Dev Tools, v3
 
-A web app for teaching people about Chrome DevTools. This is the website is the course materials for the [Learning Chrome Dev Tools Course](https://frontendmasters.com/courses/chrome-dev-tools-v2/) on Frontend Masters.
+Note: If you're looking for Mastering Chrome Devtools, v2:
+
+A web app for teaching people about Chrome DevTools. This is the website and course materials for the [Introduction to Dev Tools, v3](https://frontendmasters.com/workshops/dev-tools-v3/) on Frontend Masters.
 
 ## How to use
 
@@ -11,6 +13,12 @@ npm install
 npm start
 ```
 
-## About
+Note: If you're looking for Mastering Chrome Devtools v2, run:
 
-This site is designed as teaching aid for my "Mastering Chrome DevTools" workshops but I hope it will stand fine on its own.
+```
+git clone https://github.com/jkup/mastering-chrome-devtools.git
+cd mastering-chrome-devtools
+git checkout v2
+npm install
+npm start
+```
