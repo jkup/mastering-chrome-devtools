@@ -4,7 +4,13 @@
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#garbage_collection
 
-<button id="grow">Let's break Chrome!</button>
+### Memory Leak #1 - Too many DOM nodes
+
+<button id="grow">Create 10k divs!</button>
+
+### Memory Leak #2 - Detached DOM nodes
+
+<button id="create">Create 10k detached divs!</button>
 
 ## Next Lesson
 

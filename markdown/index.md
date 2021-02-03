@@ -1,5 +1,11 @@
 # Welcome to the course!
 
+[github.com/jkup](https://github.com/jkup)
+
+## How this course works
+
+This repository serves as the slides, demos and exercises for the Frontend Masters Introduction to DevTools course. We'll walk through the content together on video. At multiple points, we'll take 15 minute breaks to give everyone a chance to complete the exercise by themselves. Then we'll meet back up and solve the exercises together!
+
 ## Important links
 
 - Course repository: [https://github.com/jkup/mastering-chrome-devtools](https://github.com/jkup/mastering-chrome-devtools)
