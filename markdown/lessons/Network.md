@@ -51,11 +51,67 @@ Let's talk about the life of a network request.
 
 ## Network performance isn't everything!
 
+We spend so much energy compressing and combining JavaScript into dense bundles so they travel across the network faster! But that's not the whole story.
+
+This entire [article](https://medium.com/reloading/javascript-start-up-performance-69200f43b201) is worth a read but the TL;DR is that parse time is a huge performance problem, especially for mobile devices.
+
 ![JS parse cost](/js-parse.png)
+
+![JS parse cost](/parse-time.png)
 
 ## Measuring real user performance
 
-https://developer.mozilla.org/en-US/docs/Web/API/Performance
+Why measure performance from real users?
+
+### First we had getTime
+
+```javascript
+const start = new Date().getTime();
+
+for (let i = 0; i < 100000; i++) {
+  // Do nothing
+}
+
+const end = new Date().getTime();
+
+console.log(end - start);
+```
+
+### Then we got console.time
+
+```javascript
+console.time("doNothing");
+
+for (let i = 0; i < 100000; i++) {
+  // Do nothing
+}
+
+console.timeEnd("doNothing");
+```
+
+### Now we have performance mark and measure!
+
+```javascript
+performance.mark("Start");
+
+for (let i = 0; i < 1000000000; i++) {
+  // Do nothing
+}
+
+performance.mark("End");
+
+performance.measure("Frontend Masters Chrome Devtools", "Start", "End");
+
+performance.getEntriesByType("measure");
+```
+
+You can measure so many things using the [performance API](https://developer.mozilla.org/en-US/docs/Web/API/Performance)
+
+```javascript
+const resources = performance.getEntriesByType("resource");
+const paints = performance.getEntriesByType("paint");
+const navigations = performance.getEntriesByType("navigation");
+```
 
 ## Next Lesson
 

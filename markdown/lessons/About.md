@@ -51,6 +51,8 @@ Chrome DevTools can do so many things. Sometimes it's more important to know wha
    - Emulate devices
    - Simulate network conditions
 
+(It's worth noting that Chrome DevTools also allows you to Remote debug web apps on any Android\* device. You can find information on how to do that [here](https://developers.google.com/web/tools/chrome-devtools/remote-debugging))
+
 ## Course format
 
 We're going to break the course down into:

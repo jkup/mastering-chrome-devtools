@@ -34,8 +34,6 @@
 
 https://developers.google.com/web/tools/puppeteer
 
-TODO hit this site with puppeteer
-
 ## Lighthouse CI
 
 https://github.com/GoogleChrome/lighthouse-ci/blob/master/docs/getting-started.md

@@ -1,8 +1,6 @@
-# Experiments
+# Experiments and Addons
 
 - How to enable
-
-TODO prepare a few
 
 ## DevTool addons
 
