@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.controls {
+  position: fixed;
+  top: 4vw;
+  left: 2vw;
+  z-index: 1;
+}
+
+.controls button {
+  display: block;
+  font-size: 1em;
+  padding: 1em;
+  margin: 1em;
+  background-color: #1a73e8;
+  color: white;
+}
+
+.subtract:disabled {
+  opacity: 0.2;
+}
+
+.mover {
+  height: 3vw;
+  position: absolute;
+  z-index: 0;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+@media (max-width: 600px) {
+  .controls button {
+    min-width: 20vw;
+  }
+}

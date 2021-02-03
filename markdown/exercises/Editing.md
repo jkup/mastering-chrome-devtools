@@ -1,6 +1,6 @@
 # Exercise 1 - Quick Edits
 
-Let's take 15 minutes, fire up the DevTools (refer back to [Lesson 1](/lesson/1) if you forgot how!) and complete the following tasks.
+Let's take 15 minutes, fire up the DevTools (refer back to the [Introduction](/lesson/Introduction) if you forgot how!) and complete the following tasks.
 
 1. Change this list from an ordered list `ol` to an unordered list `ul`.
 1. Clicking on <a id="link" href="#">this link</a> makes a popup appear. Can you find the JavaScript code that calls the `alert`?
@@ -57,4 +57,4 @@ There are a bunch of cards! Can you figure out the border color of the one with 
 
 ## Back to the lesson
 
-Finished? Let's head back to [Lesson 1](/lesson/1)
+Finished? Let's head back to the [Lesson](/lesson/Editing)

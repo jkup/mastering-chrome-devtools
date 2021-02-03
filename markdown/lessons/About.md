@@ -5,19 +5,7 @@
 - [A walk through the panels](#a-walk-through-the-panels)
 - [The course format](#course-format)
 
-Chrome DevTools can do so many things. Sometimes it's more important to know what a tool can do than knowing exactly how to do it! Today we'll cover Chrome' ability to:
-
-- Create Files
-- Write Code
-- Persist Changes to Disk
-- Step Through Debug
-- Audit Pages
-- Emulate Devices
-- Simulate Network Conditions
-- Find and Fix Memory Leaks
-- Profile Your Code
-- Analyze JavaScript performance
-- Spot page jank
+Chrome DevTools can do so many things. Sometimes it's more important to know what a tool can do than knowing exactly how to do it!
 
 ## A walk through the panels
 
@@ -48,6 +36,7 @@ Chrome DevTools can do so many things. Sometimes it's more important to know wha
    - Step through debugger
    - Persist changes to disk
 7. **Application** 💼
+   - Lighthouse audits
    - Check PWA features
    - Application storage
    - Check cache
@@ -58,6 +47,9 @@ Chrome DevTools can do so many things. Sometimes it's more important to know wha
 9. **Lighthouse** 🚢
    - Full website audit
    - Check Performance, SEO, Accessibility
+     10 **Also** ➕
+   - Emulate devices
+   - Simulate network conditions
 
 ## Course format
 
@@ -65,9 +57,9 @@ We're going to break the course down into:
 
 1. Editing - Elements, Console, Sources
 1. Debugging - Elements, Console, Sources
-1. Auditing - Network, Lighthouse
 1. Profiling - Network, Performance, Memory
+1. Auditing - Network, Lighthouse
 
 ## Next Lesson
 
-Let's begin by learning how to [edit websites](/lesson/3)
+Let's begin by learning how to [edit websites](/lesson/Editing)

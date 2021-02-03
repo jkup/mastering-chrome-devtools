@@ -48,4 +48,4 @@ But if you needed to check the value of anything that wasn't primitive you would
 
 ## Next Lesson
 
-What can modern DevTools do? Find out in [Lesson 2](/lesson/2)
+What can modern DevTools do? Find out in the next lesson on the [next lesson](/lesson/About)

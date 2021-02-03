@@ -6,12 +6,20 @@
   - Database
   - Server
   - Network
+  - Compression
 - Front End
   - Large bundle
   - Too many files
   - Images or JavaScript not async
   - Images too large
+  - Images uncompressed
   - Unused JavaScript or CSS
+  - CSS in Document Body
+  - Not using browser caching
+
+## Simulate Slow Network
+
+## Lighthouse
 
 [Official Lighthouse Docs](https://developers.google.com/web/tools/lighthouse)
 
@@ -34,4 +42,4 @@ https://github.com/GoogleChrome/lighthouse-ci/blob/master/docs/getting-started.m
 
 ## Next Lesson
 
-Now let's move on to the [Next Lesson](/lesson/8)
+Now let's move on to the [Next Lesson](/lesson/Experiment)

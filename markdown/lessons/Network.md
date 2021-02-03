@@ -9,15 +9,12 @@
 ## Interesting facts about page load time
 
 > Walmart and Amazon both observed a 1% increase in earnings for every 100 milliseconds of improved webpage speed.
->
+
 > Yahoo saw a 9% increase in traffic to every 400 milliseconds of webpage speed improvement.
->
+
 > Google loses 20% of their traffic for every additional 100 milliseconds it takes for a page to load.
 
 ![Google Marketing](/google-marketing.png)
-From [https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/](https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/)
-
-TODO images with attribution
 
 In this lesson, we'll learn about
 
@@ -62,4 +59,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Performance
 
 ## Next Lesson
 
-Now that we understand Network and page load performance, let's dive into on page performance in the [next lesson](/lesson/6)
+Now that we understand Network and page load performance, let's dive into on page performance in the [next lesson](/lesson/CPU)

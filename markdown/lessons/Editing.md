@@ -8,26 +8,27 @@
 
 ## Quick Edits
 
-(✨ indicates a tip or trick!)
+(⚡️ indicates a tip or trick!)
 
 - Editing CSS
 - Adding CSS Rules
 - Editing HTML
-- ✨ Scroll into view
+- ⚡️ Scroll into view
+- Console shortcuts
 - Hide and show elements
 - Simulate state
-- ✨ Computed styles
-- ✨ HTML breakpoints
+- ⚡️ Computed styles
+- ⚡️ HTML breakpoints
 - Find event listeners
-- ✨ Changing color formats
-- ✨ Import custom theme
+- ⚡️ Changing color formats
+- ⚡️ Import custom theme
 - CSS Specificity
 - Accessible color picker
 - Accessibility panel
 
 ![CSS Specifishity](/specifishity.png)
 
-After watching the quick edits video, please move on to [Exercise 1](/exercise/1)
+After watching the quick edits video, please move on to the [Exercise](/exercise/Editing)
 
 ## DevTools as an IDE
 
@@ -47,14 +48,14 @@ Limitations (from [Chrome DevTools Official Docs](https://developers.google.com/
 
 Chrome DevTools Workspaces allow you to configure an application so that all of the changes you make to the **Sources** or **Elements** tab persist to disk. This means you could theoretically use Chrome DevTools as your primary IDE.
 
-> Limitations
->
-> If you're using a modern framework, it probably transforms your source code from a format that's easy for you to maintain into a format that's optimized to run as quickly as possible. Workspaces is usually able to map the optimized code back to your original source code with the help of source maps. But there's a lot of variation between frameworks over how they use source maps. Devtools simply can't support all the variations.
->
-> Workspaces is known to not work with these frameworks:
->
-> Create React App
->
-> If you run into issues while using Workspaces with your framework of choice, or you get it working after some custom configuration, please start a thread in the mailing list or ask a question on Stack Overflow to share your knowledge with the rest of the DevTools community.
+Limitations:
 
-After watching the Workspaces video, please move on to [Exercise 2](/exercise/2)
+If you're using a modern framework, it probably transforms your source code from a format that's easy for you to maintain into a format that's optimized to run as quickly as possible. Workspaces is usually able to map the optimized code back to your original source code with the help of source maps. But there's a lot of variation between frameworks over how they use source maps. Devtools simply can't support all the variations.
+
+Workspaces is known to not work with these frameworks:
+
+- Create React App
+
+If you run into issues while using Workspaces with your framework of choice, or you get it working after some custom configuration, please start a thread in the mailing list or ask a question on Stack Overflow to share your knowledge with the rest of the DevTools community.
+
+After watching the Workspaces video, please move on to the [Exercise](/exercise/Workspaces)

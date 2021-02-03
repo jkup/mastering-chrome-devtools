@@ -1,9 +1,5 @@
 # Step Through Debugging
 
-### In this lesson we'll learn
-
-TODO
-
 If you've programmed in another language, step through debugging may already be familiar to you! But we'll cover it here for the folks that haven't seen it before.
 
 The basic idea is that you can pick a line in your code and highlight it. Whenever that line is about to be executed, the browser will instead **pause** the execution of the app. Leaving you free to poke around in it's current state for as long as you'd like.
@@ -18,8 +14,8 @@ In this lesson we'll learn how to:
 - Set conditional breakpoints
 - Set XHR breakpoints
 
-After watching the Step Through Debugging video, please move on to [Exercise 3](/exercise/3)
+After watching the Step Through Debugging video, please move on to the [Exercise](/exercise/Debugging)
 
 ## Next Lesson
 
-How confident are you in your apps Network Performance? Do you know the # of requests? How big your bundles are? What your app looks like while it's loading? Let's learn all this and more in the [next lesson](/lesson/5)!
+How confident are you in your apps Network Performance? Do you know the # of requests? How big your bundles are? What your app looks like while it's loading? Let's learn all this and more in the [next lesson](/lesson/Network)!

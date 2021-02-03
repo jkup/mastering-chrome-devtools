@@ -20,15 +20,10 @@ There are so many amazing courses that teach you how to **create** web applicati
 
 1. History of DevTools
 1. A walk through the panels
-   - Editing
-   - HTML & CSS, The Box Model, Workspaces
 1. Debugging
-   - Console logging, Step through debugging,
-1. Performance
-   - Page load: Networking latency, server latency
-1. Auditing
-   - Lighthouse, Webpagetest
+1. Network performance
 1. CPU & Memory
+1. Auditing
 1. Automation
 
 ## Who am I?
@@ -41,4 +36,4 @@ I write on my personal blog [jonkuperman.com](https://jonkuperman.com) and teach
 
 ## Let's begin!
 
-Let's head over to [Lesson 1](/lesson/1) to begin.
+Let's head over to the [Introduction](/lesson/Introduction) to begin.
