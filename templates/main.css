@@ -54,6 +54,13 @@ nav a:hover {
   border-bottom: 5px solid #fff;
 }
 
+.note {
+  background: #eee;
+  border-left: 3px solid #f8ce5e;
+  margin: 25px 0;
+  padding: 24px 32px;
+}
+
 #main,
 #footer {
   background: #fff;

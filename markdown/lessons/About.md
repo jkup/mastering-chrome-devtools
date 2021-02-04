@@ -7,6 +7,8 @@
 
 Chrome DevTools can do so many things. Sometimes it's more important to know what a tool can do than knowing exactly how to do it!
 
+<div class="note">💡 Note: Chrome extensions often mess with the DevTools data, leading to inaccurate reporting! If you're going to run any important audits, make sure you have all of your extensions disabled **or** use an Incognito tab!</div>
+
 ## A walk through the panels
 
 1. **Elements** 🧪
