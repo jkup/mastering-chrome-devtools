@@ -14,11 +14,11 @@ You have 3 great tools for finding memory leaks in Chrome:
 
 ### Memory Leak #1 - Too many DOM nodes
 
-<button id="grow">Create 10k divs!</button>
+<button id="grow">Create 1k divs!</button>
 
 ### Memory Leak #2 - Detached DOM nodes
 
-<button id="create">Create 10k detached divs!</button>
+<button id="create">Create 1k detached divs!</button>
 
 ## Next Lesson
 
