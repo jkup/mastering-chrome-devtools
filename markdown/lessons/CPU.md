@@ -43,7 +43,25 @@ Each of those frames has a budget of just over 16ms (1 second / 60 = 16.66ms). I
 
 ### requestAnimationFrame
 
-![layout thrashing](/layout-thrashing.png)
+```javascript
+// Read
+var h1 = element1.clientHeight;
+
+// Write (invalidates layout)
+element1.style.height = (h1 * 2) + 'px'
+
+// Read (triggers layout)
+var h2 = element2.clientHeight;
+
+// Write (invalidates layout)
+element2.style.height = (h2 * 2) + 'px'
+
+// Read (triggers layout)
+var h3 = element3.clientHeight;
+
+// Write (invalidates layout)
+element3.style.height = (h3 * 2) + 'px'
+```
 
 Enter `requestAnimationFrame()`
 

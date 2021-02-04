@@ -26,11 +26,12 @@ There are so many amazing courses that teach you how to **create** web applicati
 
 1. History of DevTools
 1. A walk through the panels
+1. Editing
 1. Debugging
 1. Network performance
-1. CPU & Memory
+1. CPU
+1. Memory
 1. Auditing
-1. Automation
 
 ## Who am I?
 

@@ -9,5 +9,3 @@ performance.mark("End");
 performance.measure("Frontend Masters Chrome Devtools", "Start", "End");
 
 performance.getEntriesByType("measure");
-
-console.log("hi");

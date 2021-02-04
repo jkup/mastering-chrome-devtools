@@ -38,18 +38,16 @@ Chrome DevTools can do so many things. Sometimes it's more important to know wha
    - Step through debugger
    - Persist changes to disk
 7. **Application** 💼
-   - Lighthouse audits
-   - Check PWA features
    - Application storage
-   - Check cache
+   - Check PWA features
+   - Clear cache
 8. **Memory** 🤔
    - Generate memory snapshots
-   - Compare snapshots
    - Find and fix memory leaks
 9. **Lighthouse** 🚢
    - Full website audit
    - Check Performance, SEO, Accessibility
-     10 **Also** ➕
+10. **Also** ➕
    - Emulate devices
    - Simulate network conditions
 
