@@ -8,7 +8,7 @@
     "fastify-markdown": "^0.4.0",
     "fastify-static": "^3.4.0",
     "point-of-view": "^4.9.0",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   },
   "devDependencies": {},
   "scripts": {
