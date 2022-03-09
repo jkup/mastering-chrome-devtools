@@ -2,7 +2,7 @@
 
 Note: If you're looking for Mastering Chrome Devtools, v2:
 
-A web app for teaching people about Chrome DevTools. This is the website and course materials for the [Introduction to Dev Tools, v3](https://frontendmasters.com/workshops/dev-tools-v3/) on Frontend Masters.
+A web app for teaching people about Chrome DevTools. This is the website and course materials for the [Introduction to Dev Tools, v3](https://frontendmasters.com/courses/dev-tools/) on Frontend Masters.
 
 ## Requirements
 
