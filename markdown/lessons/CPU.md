@@ -12,7 +12,7 @@ In this lesson we'll learn:
 
 ## Rail
 
-![Chrome's RAIL model](/rail.png)
+![Chrome's RAIL model](../../public/rail.png)
 
 **0 to 16 ms** Users are exceptionally good at tracking motion, and they dislike it when animations aren't smooth. They perceive animations as smooth so long as 60 new frames are rendered every second. That's 16 ms per frame, including the time it takes for the browser to paint the new frame to the screen, leaving an app about 10 ms to produce a frame.
 
@@ -48,19 +48,19 @@ Each of those frames has a budget of just over 16ms (1 second / 60 = 16.66ms). I
 var h1 = element1.clientHeight;
 
 // Write (invalidates layout)
-element1.style.height = (h1 * 2) + 'px'
+element1.style.height = h1 * 2 + "px";
 
 // Read (triggers layout)
 var h2 = element2.clientHeight;
 
 // Write (invalidates layout)
-element2.style.height = (h2 * 2) + 'px'
+element2.style.height = h2 * 2 + "px";
 
 // Read (triggers layout)
 var h3 = element3.clientHeight;
 
 // Write (invalidates layout)
-element3.style.height = (h3 * 2) + 'px'
+element3.style.height = h3 * 2 + "px";
 ```
 
 Enter `requestAnimationFrame()`

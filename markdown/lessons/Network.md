@@ -14,7 +14,7 @@
 
 > Google loses 20% of their traffic for every additional 100 milliseconds it takes for a page to load.
 
-![Google Marketing](/google-marketing.png)
+![Google Marketing](../../public/google-marketing.png)
 
 In this lesson, we'll learn about
 
@@ -55,9 +55,9 @@ We spend so much energy compressing and combining JavaScript into dense bundles 
 
 This entire [article](https://medium.com/reloading/javascript-start-up-performance-69200f43b201) is worth a read but the TL;DR is that parse time is a huge performance problem, especially for mobile devices.
 
-![JS parse cost](/js-parse.png)
+![JS parse cost](../../public/js-parse.png)
 
-![JS parse cost](/parse-time.png)
+![JS parse cost](../../public/parse-time.png)
 
 ## Measuring real user performance
 

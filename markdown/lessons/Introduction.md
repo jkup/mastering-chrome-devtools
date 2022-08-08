@@ -12,7 +12,7 @@ Right click on a website and click **Inspect** or use the keyboard shortcut Comm
 
 You should get something like this!
 
-![Chrome DevTools](/chrome-devtools.png)
+![Chrome DevTools](../../public/chrome-devtools.png)
 
 But... what are we looking at?
 
@@ -20,15 +20,15 @@ But... what are we looking at?
 
 Before we had DevTools, we had source code.
 
-![View Source](/view-source.png)
+![View Source](../../public/view-source.png)
 
 And if you wanted to check the value of something, we had `alert`
 
-![Alert example](/alert.png)
+![Alert example](../../public/alert.png)
 
 But if you needed to check the value of anything that wasn't primitive you would get
 
-![Alert example with an object](/alert-object.png)
+![Alert example with an object](../../public/alert-object.png)
 
 ## Let there be DOM
 
@@ -36,9 +36,9 @@ But if you needed to check the value of anything that wasn't primitive you would
 
 ## Our first DevTool 🐞
 
-![Firebug](/firebug.png)
+![Firebug](../../public/firebug.png)
 
-![Firebug Discontinued](/firebug-discontinued.png)
+![Firebug Discontinued](../../public/firebug-discontinued.png)
 
 ## Who this course is made for
 
