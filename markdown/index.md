@@ -35,7 +35,7 @@ There are so many amazing courses that teach you how to **create** web applicati
 
 ## Who am I?
 
-![Jon Kuperman](jon.jpeg)
+![Jon Kuperman](../public/jon.jpeg)
 
 My name is Jon Kuperman. I'm an engineer at Adobe working on their Creative Cloud. Before that I worked on the Brave Browser and Twitter.com.
 

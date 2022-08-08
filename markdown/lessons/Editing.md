@@ -26,7 +26,7 @@
 - Accessible color picker
 - Accessibility panel
 
-![CSS Specifishity](/specifishity.png)
+![CSS Specifishity](../../public/specifishity.png)
 
 After watching the quick edits video, please move on to the [Exercise](/exercise/Editing)
 
@@ -36,9 +36,9 @@ It helps me to think about the Sources tab as an IDE. Pretend it's VSCode or Sub
 
 Compare:
 
-![Sources](/sources.png)
+![Sources](../../public/sources.png)
 
-![VSCode](/vscode.png)
+![VSCode](../../public/vscode.png)
 
 The sources tab is best for debugging more complex problems. It's much easier to edit large amounts of JavaScript, set breakpoints or view an Error stack with this panel.
 
